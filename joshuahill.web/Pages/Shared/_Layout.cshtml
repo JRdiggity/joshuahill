@@ -1,74 +1,107 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - joshuahill.web</title>
+<html lang="en">
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Bootstrap 4 Theme">
+    <meta name="author" content="kingstudio.ro">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png">
+    <!-- Site Title -->
+    <title>MNML - Minimal Portfolio Theme</title>
+    <!-- Bootstrap 4 core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+    <link href="css/linear-icons.css" rel="stylesheet">
+    <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-page="/Index" class="navbar-brand">joshuahill.web</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <partial name="_CookieConsentPartial" />
-
-    <div class="container body-content">
+    <div>
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2019 - joshuahill.web</p>
+        <footer class="big bg-darkgrey dark">
+            <div class="container text-center">
+                <div class="row vcenter">
+                    <div class="col-md-8 footer-left-area">
+                        <p>© 2018 <span class="text-regular">MNML</span> BY <a href="https://kingstudio.ro" target="_blank">KINGSTUDIO</a>.</p>
+                    </div>
+                    <div class="col-md-4 social-icons footer-right-area">
+                        <a href="#x"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#x"><i class="fab fa-twitter"></i></a>
+                        <a href="#x"><i class="fab fa-instagram"></i></a>
+                    </div><!-- / social-icons -->
+                </div><!-- / row -->
+            </div><!-- / container -->
         </footer>
     </div>
-
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
-
-    @RenderSection("Scripts", required: false)
+    <!-- Core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- / Core JavaScript -->
+    <!-- preloader -->
+    <script src="js/preloader.js"></script>
+    <!-- / preloader -->
+    <!-- Portfolio Script -->
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script>
+        $(document).ready(function () {
+            if (Modernizr.touch) {
+                // show the close overlay button
+                $(".close-overlay").removeClass("hidden");
+                // handle the adding of hover class when clicked
+                $(".img").click(function (e) {
+                    if (!$(this).hasClass("hover")) {
+                        $(this).addClass("hover");
+                    }
+                });
+                // handle the closing of the overlay
+                $(".close-overlay").click(function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if ($(this).closest(".img").hasClass("hover")) {
+                        $(this).closest(".img").removeClass("hover");
+                    }
+                });
+            } else {
+                // handle the mouseenter functionality
+                $(".img").mouseenter(function () {
+                    $(this).addClass("hover");
+                })
+                    // handle the mouseleave functionality
+                    .mouseleave(function () {
+                        $(this).removeClass("hover");
+                    });
+            }
+        });
+    </script>
+    <!-- / Portfolio Script -->
+    <!-- LightBox -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script>
+        // This will create a single gallery from all elements that have class "lightbox"
+        $('.lightbox').each(function () {
+            $(this).magnificPopup({
+                delegate: 'a.image-lightbox', // the selector for gallery item
+                type: 'image',
+                removalDelay: 500,
+                mainClass: 'mfp-fade',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+    <!-- / LightBox -->
 </body>
 </html>
