@@ -1,0 +1,14 @@
+﻿.bg-light {
+  background-color: white !important; }
+
+section {
+  background-color: #f5f5f5; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #00A1A7; }
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .open > .nav-link {
+  color: #00A1A7; }
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .active > .nav-link:hover, .navbar-light .navbar-nav .nav-link.active:hover, .navbar-light .navbar-nav .nav-link.open:hover, .navbar-light .navbar-nav .open > .nav-link:hover {
+  color: pink; }
