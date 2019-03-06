@@ -1,7 +1,10 @@
 ﻿[
-
   {
     "outputFile": "wwwroot/css/myown.css",
     "inputFile": "wwwroot/scss/myown.scss"
+  },
+  {
+    "outputFile": "wwwroot/js/canvas.es5.js",
+    "inputFile": "wwwroot/js/canvas.js"
   }
 ]
