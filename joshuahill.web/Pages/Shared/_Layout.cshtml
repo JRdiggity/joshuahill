@@ -28,7 +28,7 @@
 <body>
     <div>
         @RenderBody()
-        <footer class="big bg-darkgrey dark">
+        <footer class="big" id="footer">
             <div class="container text-center">
                 <div class="row vcenter">
                     <div class="col-md-8 footer-left-area">
@@ -45,7 +45,6 @@
     </div>
     <!-- Core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-    <script src="~/js/canvas.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -56,6 +55,7 @@
     <!-- Portfolio Script -->
     <script src="js/jquery.shuffle.min.js"></script>
     <script src="js/portfolio.js"></script>
+    <script src="~/js/canvas.js"></script>
     <script>
         $(document).ready(function () {
             if (Modernizr.touch) {
